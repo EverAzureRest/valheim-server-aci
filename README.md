@@ -39,7 +39,7 @@ REGION=<azure region>
 SERVERNAME="myservername"
 WORLDNAME="myworldname"
 SECRETNAME="name of the keyvualt secret"
-DATA={"\action"\:"\$ACTION"\,"\region"\:"\$REGION"\,"\servername"\:"\$SERVERNAME"\,"\WORLDNAME"\:"\$WORLDNAME"\,"\customerId"\:"\$SECRETNAME"\}
+DATA={"\action"\:"\$ACTION"\,"\region"\:"\$REGION"\,"\servername"\:"\$SERVERNAME"\,"\worldname"\:"\$WORLDNAME"\,"\customerId"\:"\$SECRETNAME"\}
 
 curl -X POST -d $DATA $URL
 ```
