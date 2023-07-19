@@ -18,6 +18,12 @@ Store your server password in a new secret in the Azure Keyvault that is created
 ```bash
 az keyvault secret set -n <secretName> --vault-name <keyVault Name> --value <yourSuperSecretPassword>
 ```
+Once the Function, Hosting Plan, Storage, etc have been deployed by the template, you need to deploy the FunctionApp code. 
+Change into the Function dir and run
+```bash
+az functionapp deploy --name AppName --resource-group ResouceGroup --src-path ./
+```
+
 ## How to run
 
 Once the deployment has run, you can log into the Azure Portal and get the FunctionApp URL and use that to call the API to build your game server using a POST method and the following JSON schema:
